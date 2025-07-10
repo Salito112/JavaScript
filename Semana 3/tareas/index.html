@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mi lista de tareas</h1>
+
+    <form id="formulario-tarea">
+      <input type="text" id="descripcion" placeholder="Escribe una tarea..." required>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <div id="lista-tareas">
+      <!-- Las tareas aparecerán aquí -->
+    </div>
+  </div>
+
+  <script>
+    const tareas = [];
+
+    const formulario = document.getElementById('formulario-tarea');
+    const inputDescripcion = document.getElementById('descripcion');
+    const contenedorTareas = document.getElementById('lista-tareas');
+
+    formulario.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const descripcion = inputDescripcion.value.trim();
+      if (descripcion !== '') {
+        const nuevaTarea = {
+          descripcion: descripcion,
+          completada: false
+        };
+
+        tareas.push(nuevaTarea);
+        inputDescripcion.value = '';
+        mostrarTareas();
+      }
+    });
+
+    function mostrarTareas() {
+      contenedorTareas.innerHTML = '';
+
+      tareas.forEach((tarea, index) => {
+        const div = document.createElement('div');
+        div.className = 'tarea';
+        if (tarea.completada) {
+          div.classList.add('completada');
+        }
+
+        div.innerHTML = `
+          <span>${tarea.descripcion}</span>
+          <div class="acciones">
+            <button class="check" onclick="marcarCompletada(${index})">✔</button>
+            <button class="delete" onclick="eliminarTarea(${index})">✖</button>
+          </div>
+        `;
+
+        contenedorTareas.append(div);
+      });
+    }
+
+    function marcarCompletada(index) {
+      tareas[index].completada = !tareas[index].completada;
+      mostrarTareas();
+    }
+
+    function eliminarTarea(index) {
+      tareas.splice(index, 1);
+      mostrarTareas();
+    }
+  </script>
+</body>
+</html>

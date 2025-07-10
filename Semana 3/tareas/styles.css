@@ -1,0 +1,136 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #4b5057, #000610);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Contenedor central */
+.container {
+  background-color: #fff;
+  margin-top: 60px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(239, 238, 238, 0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1d1b1b;
+}
+
+/* Formulario */
+#formulario-tarea {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #c424cf;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #550651;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ac75af;
+}
+
+/* Lista de tareas */
+#lista-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Tarjeta de tarea */
+.tarea {
+  background-color: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.tarea.completada {
+  background-color: #e6f4ea;
+  border-color: #afb5b3;
+  color: #4b5563;
+  text-decoration: line-through;
+}
+
+/* Acciones */
+.tarea .acciones {
+  display: flex;
+  gap: 12px;
+}
+
+.tarea button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.tarea button:hover {
+  transform: scale(1.2);
+  background-color: rgba(0,0,0,0.05);
+}
+
+.tarea button.check {
+  color: #5d9de2; /* verde */
+}
+
+.tarea button.delete {
+  color: #070000; /* rojo */
+}

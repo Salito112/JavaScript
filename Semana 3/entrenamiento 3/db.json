@@ -1,0 +1,10 @@
+{
+    "productos":[
+        { "id":1, "nombre": "Camiseta", "precio": 25000, "categoria": "Ropa" },
+        { "id":2, "nombre": "Pantalón", "precio": 40000, "categoria": "Ropa" },
+        { "id":3, "nombre":"Laptop", "precio": 2500000, "categoria": "Tecnología" },
+        { "id":4, "nombre": "Auriculares", "precio": 150000, "categoria": "Tecnología" },
+        { "id":5, "nombre": "Libro", "precio": 30000, "categoria": "Libros" }
+    ]
+}
+    

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica Fetch API con ID</title>
+</head>
+<body>
+  <h1>Lista de Productos</h1>
+  <ul id="listaProductos"></ul>
+
+  <h2>Agregar Productos</h2>
+  <input type="text" id="nombre" placeholder="Nombre">
+  <input type="number" id="precio" placeholder="precio" >
+  <input type="text" id="categoria" placeholder="categoria">
+  <button onclick=agregarProducto()>Agregar</button>
+
+  <script>
+    const API_URL = 'http://localhost:3000/usuarios';
+
+    // Función para cargar usuarios y mostrar ID, nombre y edad
+    function mostrarProductos() {
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(usuarios => {
+          const lista = document.getElementById('listaProductos');
+          lista.innerHTML = '';
+          usuarios.forEach(u => {
+            const li = document.createElement('li');
+            li.textContent = `ID: ${u.id} - ${u.nombre} - ${u.precio} ${u.categoria}`;
+            lista.appendChild(li);
+          });
+        });
+    }
+
+    // Función para agregar un nuevo usuario, asignando ID por posición
+    function agregarProducto() {
+      const nombre = document.getElementById('nombre').value;
+      const precio = document.getElementById('precio').value;
+      const categoria = parseInt(document.getElementById('categoria').value);
+      productos.push()
+
+      // Primero obtenemos todos los usuarios para calcular el nuevo ID
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(usuarios => {
+          const nuevoID = usuarios.length + 1; // ID basado en posición
+          const nuevoUsuario = { id: nuevoID, nombre, precio, categoria };
+
+          return fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(nuevoUsuario)
+          });
+        })
+        .then(res => res.json())
+        .then(() => {
+          mostrarProductos();
+        });
+    }
+
+    mostrarProductos();
+  </script>
+</body>
+</html>
