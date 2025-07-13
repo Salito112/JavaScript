@@ -1,0 +1,84 @@
+{
+  "Users": [
+    {
+      "name": "pablo r",
+      "email": "pablo@g",
+      "phone": "328626",
+      "password": "456",
+      "dateOfAdmission": "2006-02-16",
+      "id": "95c8",
+      "role": "user"
+    },
+    {
+      "name": "async",
+      "email": "async@g",
+      "phone": "321279539",
+      "password": "await",
+      "dateOfAdmission": "5155-08-07",
+      "id": "2437",
+      "role": "admin"
+    },
+    {
+      "id": "f992",
+      "name": "Sam sd",
+      "email": "sd@sam",
+      "phone": "3212795396",
+      "password": "",
+      "dateOfAdmission": "2025-07-11",
+      "role": "admin"
+    },
+    {
+      "id": "8b33",
+      "name": "Jeronimo Parra",
+      "email": "jeronimopq1611@gmail.com",
+      "phone": "3212795396",
+      "password": "1234",
+      "dateOfAdmission": "2222-02-22",
+      "role": "user"
+    },
+    {
+      "id": "68f3",
+      "name": "garotiña",
+      "email": "garo@ta",
+      "phone": "1236",
+      "password": "12345",
+      "dateOfAdmission": "1512-05-02",
+      "role": "user"
+    },
+    {
+      "name": "ana",
+      "email": "ana@g",
+      "phone": "321",
+      "password": "123456",
+      "dateOfAdmission": "5228-08-07",
+      "id": "610f"
+    },
+    {
+      "id": "4361",
+      "name": "ana2",
+      "email": "ana2@g",
+      "phone": "55215",
+      "password": "ana",
+      "dateOfAdmission": "66666-06-05",
+      "role": "user"
+    },
+    {
+      "id": "bb8a",
+      "name": "awo",
+      "email": "awo@g",
+      "phone": "3212795396",
+      "password": "123",
+      "dateOfAdmission": "5555-02-16",
+      "role": "user"
+    },
+    {
+      "id": "6b93",
+      "name": "SALO GONZALEZ",
+      "email": "salogonzalez1211@gmail.com",
+      "phone": "23424",
+      "password": "123456",
+      "dateOfAdmission": "2025-07-13",
+      "role": "user"
+    }
+  ]
+}
