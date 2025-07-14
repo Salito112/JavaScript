@@ -1,0 +1,87 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "sebastian",
+      "correo": "sebas@example",
+      "contraseña": 1234,
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "nombre": "andrea",
+      "correo": "andrea@example",
+      "contraseña": 1234,
+      "role": "usuario"
+    },
+    {
+      "id": "3",
+      "nombre": "lina",
+      "correo": "lina@example",
+      "contraseña": 1234,
+      "role": "admin"
+    },
+    {
+      "id": "4",
+      "nombre": "marlon",
+      "correo": "marlon@example",
+      "contraseña": 1234,
+      "role": "usuario"
+    },
+    {
+      "id": "5951",
+      "nombre": "salo",
+      "correo": "salo@g",
+      "contraseña": "123",
+      "role": "admin"
+    }
+  ],
+  "reservas": [
+    {
+      "id": "a1",
+      "nombre": "andres restrepo",
+      "titulo": "cien años de soledad"
+    },
+    {
+      "id": "52661139",
+      "nombre": "andres",
+      "titulo": "padre rico padre pobre"
+    },
+    {
+      "id": "1ce51046",
+      "nombre": "andres",
+      "titulo": "padre rico padre pobre"
+    },
+    {
+      "id": "3143",
+      "nombre": "Marlon",
+      "titulo": "cien años de soledad"
+    }
+  ],
+  "libros": [
+    {
+      "id": "b1",
+      "titulo": "cien años de soledad",
+      "autor": "gabriel garcia marquez",
+      "unidades": 5
+    },
+    {
+      "id": "b2",
+      "titulo": "el hombre mas rico de babilonea",
+      "autor": "david bustamantes",
+      "unidades": 5
+    },
+    {
+      "id": "b3",
+      "titulo": "piense y hagase rico",
+      "autor": "pedro escamoso",
+      "unidades": 4
+    },
+    {
+      "id": "b4",
+      "titulo": "padre rico padre pobre",
+      "autor": "pedro escamoso",
+      "unidades": 5
+    }
+  ]
+}
